@@ -16,5 +16,5 @@ Route::get('/', function () {
 });
 
 
-//test
+//(route, controller we are registering to the route)
 Route::resource('/tasks', 'ToDoController');
