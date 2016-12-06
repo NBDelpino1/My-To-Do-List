@@ -81,6 +81,9 @@ class ToDoController extends Controller
      */
     public function destroy($id)
     {
-        //
+//        get model Todo, destroy the model for the gievn id
+        ToDo::destroy($id);
+//        return response, redirect to tasks.index (which is where we were)
+        return response()->redirectTo(route('tasks.index'));
     }
 }
