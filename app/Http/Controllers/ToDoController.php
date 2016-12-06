@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ToDo;
 use Illuminate\Http\Request;
 
 class ToDoController extends Controller
@@ -13,7 +14,8 @@ class ToDoController extends Controller
      */
     public function index()
     {
-        return view('tasks.index');
+//        render index.blade.php ; pass in data [] to be rendered
+        return view('tasks.index', [ 'tasks' => ToDo::all()]);
     }
 
     /**
